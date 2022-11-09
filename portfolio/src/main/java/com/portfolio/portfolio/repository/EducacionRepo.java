@@ -7,6 +7,9 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface EducacionRepo extends JpaRepository <Educacion, Long> {
+    
     public Optional<Educacion> findByTitulo(String titulo);
+    
     public boolean existsByTitulo(String titulo);
+    
 }

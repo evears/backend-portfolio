@@ -18,21 +18,17 @@ public class PersonaService {
     public List<Persona> list() {
         return persorepo.findAll();
     }
+    
+    public Optional<Persona> getOne(long id) {
+        return persorepo.findById(id);
+    }
 
     public void save(Persona persona) {
         persorepo.save(persona);
     }
 
-    public void delete(Long id) {
+    public void delete(long id) {
         persorepo.deleteById(id);
-    }
-
-    public Persona find(Long id) {
-        return persorepo.findById(id).orElse(null);
-    }
-
-    public Optional<Persona> getOne(long id) {
-        return persorepo.findById(id);
     }
     
     public boolean existsById(long id) {

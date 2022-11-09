@@ -1,49 +1,19 @@
 package com.portfolio.portfolio.dto;
 
+import java.io.Serializable;
 import javax.validation.constraints.NotBlank;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
-public class DtoHabilidad {
-    
-    @NotBlank
-    private long idhab;
-    
+@Getter @Setter @NoArgsConstructor @AllArgsConstructor
+public class DtoHabilidad implements Serializable {
+
     @NotBlank
     private String nombre;
     
     @NotBlank
     private int porcentaje;
 
-    public DtoHabilidad() {
-    }
-
-    public DtoHabilidad(String nombre, int porcentaje) {
-        this.nombre = nombre;
-        this.porcentaje = porcentaje;
-    }
-
-    public long getIdhab() {
-        return idhab;
-    }
-
-    public void setIdhab(long idhab) {
-        this.idhab = idhab;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public int getPorcentaje() {
-        return porcentaje;
-    }
-
-    public void setPorcentaje(int porcentaje) {
-        this.porcentaje = porcentaje;
-    }
-    
-    
 }

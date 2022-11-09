@@ -1,16 +1,19 @@
 package com.portfolio.portfolio.model;
 
-import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Entity
 @Table(name = "experiencias")
-public class Experiencia implements Serializable {
+@Getter @Setter @NoArgsConstructor
+public class Experiencia {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -35,9 +38,6 @@ public class Experiencia implements Serializable {
     @Column(name = "aniohasta")
     private int aniohasta;
 
-    public Experiencia() {
-    }
-
     public Experiencia(String puesto, String descripcionexpe, String empresa, String urlfotoempresa, int aniodesde, int aniohasta) {
         this.puesto = puesto;
         this.descripcionexpe = descripcionexpe;
@@ -47,60 +47,4 @@ public class Experiencia implements Serializable {
         this.aniohasta = aniohasta;
     }
 
-    public long getIdExpe() {
-        return idExpe;
-    }
-
-    public void setIdExpe(long idExpe) {
-        this.idExpe = idExpe;
-    }
-
-    public String getPuesto() {
-        return puesto;
-    }
-
-    public void setPuesto(String puesto) {
-        this.puesto = puesto;
-    }
-
-    public String getDescripcionexpe() {
-        return descripcionexpe;
-    }
-
-    public void setDescripcionexpe(String descripcionexpe) {
-        this.descripcionexpe = descripcionexpe;
-    }
-
-    public String getEmpresa() {
-        return empresa;
-    }
-
-    public void setEmpresa(String empresa) {
-        this.empresa = empresa;
-    }
-
-    public String getUrlfotoempresa() {
-        return urlfotoempresa;
-    }
-
-    public void setUrlfotoempresa(String urlfotoempresa) {
-        this.urlfotoempresa = urlfotoempresa;
-    }
-
-    public int getAniodesde() {
-        return aniodesde;
-    }
-
-    public void setAniodesde(int aniodesde) {
-        this.aniodesde = aniodesde;
-    }
-
-    public int getAniohasta() {
-        return aniohasta;
-    }
-
-    public void setAniohasta(int aniohasta) {
-        this.aniohasta = aniohasta;
-    }
-    
 }
